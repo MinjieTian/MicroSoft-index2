@@ -11,11 +11,16 @@ footer{
     width: 100%;
     margin-right: auto;
     margin-left: auto;
-    max-width: 1602px;
+    /*max-width: 1602px;*/
     min-width: 320px;
-    padding: 0px 5%;
+    padding: 0 5% 0 5%;
 }
 
+@media screen and (min-width: 1602px){
+    footer{
+        padding-left: calc(50% - 790px);
+    }
+}
 
 nav{
     height: 54px;
@@ -100,11 +105,58 @@ label{
 
 #allMsBox input~div{
     display: none;
+    max-width: 1230px;
+    width: 90vw;
+    background-color: #f2f2f2;
+    /*margin-left: -60vw;*/
+    border: 1px lightgray solid;
+    right: 5vw;
 }
 
 #allMsBox input:checked~div{
     display: block;
     background-color: #f2f2f2;
+}
+
+#lastTwoDiv{
+    min-height: 397px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.divInAllMicrosoft{
+    height: 397px;
+    width: 195px;
+}
+
+.divInAllMicrosoft>ul{
+    width: 100%;
+}
+.divInAllMicrosoft>ul>li{
+    width: 100%;
+    font-size: 12px !important;
+    font-family: Segoe UI,SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    padding-left: 24px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.divInAllMicrosoft>ul>li:hover>a{
+    text-decoration: underline;
+}
+
+
+.divInAllMicrosoft>ul>li:first-of-type{
+    font-weight: 600;
+    color: #000;
+    padding-top: 18px;
+    /*padding-bottom: 18px;*/
+
+}
+
+#lastDiv{
+    height: 38px;
+    background-color: darkgrey;
 }
 
 .navI, #navDrop i{
@@ -149,6 +201,27 @@ label{
 
 #navDrop{
     display: none;
+}
+
+.dropdown-menu> li{
+    height: 50px;
+    font-size: 13px;
+    text-indent: 20px;
+    color: black;
+    width: 100%;
+}
+
+.dropdown-menu> li>a{
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    border-bottom: 0px solid transparent;
+    padding-bottom: 0px;
+}
+
+.dropdown-menu{
+    background-color: #f2f2f2;
+    width: 100vw;
 }
 
 @media screen and (max-width: 858px) {
@@ -391,6 +464,11 @@ label{
 #scopeRight{
     right: 0;
 }
+.itemInScope> div{
+    width: 125px;
+    margin: auto;
+}
+
 
 #scopeLeft:hover,#scopeRight:hover{
     opacity: 1;
@@ -421,6 +499,18 @@ label{
         width: 100%;
         display: flex;
         height: 48px;
+        justify-content: left;
+    }
+
+    .itemInScope>img{
+        width: 20px;
+        height: 21px;
+    }
+
+    .itemInScope > div{
+        width: 100%;
+        text-align: left;
+        text-indent: 26px;
     }
 
     #scopeLeft,#scopeRight{
@@ -556,7 +646,7 @@ footer>.row> .col-lg-2{
 }
 
 #footerRow{
-    margin: auto;
+    /*margin: auto;*/
 }
 
 footer>.row>.col-lg-2 li:first-of-type{
@@ -593,8 +683,8 @@ footer>.row>.col-lg-2 li:not(:first-of-type):hover >a, #footerDiv span:hover> a{
 #footerDiv{
     display: flex;
     flex-wrap: wrap;
-    padding: 30px 24px 16px;
-    margin: auto;
+    padding: 30px 0px 16px;
+    margin-top: auto;
     justify-content: space-between;
 
 }
@@ -603,10 +693,17 @@ footer>.row>.col-lg-2 li:not(:first-of-type):hover >a, #footerDiv span:hover> a{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    /*padding-left: 0;*/
 }
 
+
+#footerDiv> div > ul{
+    padding-left: 0;
+}
+
+
 #footerDiv> div:last-of-type{
-    margin-top: 6px;
+    /*margin-top: 6px;*/
 }
 
 @media  screen and (max-width: 990px) {
@@ -615,9 +712,32 @@ footer>.row>.col-lg-2 li:not(:first-of-type):hover >a, #footerDiv span:hover> a{
     }
 }
 
+@media screen and (max-width: 776px){
+    #footerDiv> div:last-of-type{
+        margin-left: -44px;
+    }
+}
+
 @media screen and (max-width: 576px){
     footer>.row> .col-lg-2{
         height: 220px;
-
     }
 }
+
+/*#footerRow>div:first-of-type,#footerRow>div:nth-of-type(4){*/
+/*    padding-left: 0px;*/
+/*}*/
+
+/*#footerRow>div:first-of-type>ul,#footerRow>div:nth-of-type(4)>ul{*/
+/*    padding-left: 0px;*/
+/*}*/
+
+/*@media screen and (max-width: 576px){*/
+    #footerRow>div>ul{
+        padding-left: 0px;
+    }
+    #footerRow>div{
+        padding-left: 0px;
+        margin-bottom: 20px;
+    }
+/*}*/

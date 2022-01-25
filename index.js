@@ -1,7 +1,9 @@
+
 window.onload=function (){
     document.getElementById('bi-search').onclick = function () {if(document.getElementById('searchBar').style.display != 'block') {if (innerWidth <= 858){document.getElementById('logo').style.display = 'none';}document.getElementById('searchBar').style.display = 'block';document.getElementById('navUl').style.display = 'none';document.getElementById('allMsBox').style.display = 'none';document.getElementById('bi-search').style.display = 'none';document.getElementById('bi-cart').style.display = 'none';document.getElementById('bi-person').style.display = 'none';}}
     document.getElementById('navCancelBtn').onclick = function (){document.getElementById('logo').style.display = '';document.getElementById('searchBar').style.display = '';document.getElementById('navUl').style.display = '';document.getElementById('allMsBox').style.display = '';document.getElementById('bi-search').style.display = '';document.getElementById('bi-cart').style.display = '';document.getElementById('bi-person').style.display = '';}
     document.getElementById('scopeRight').onclick = function (){this.style.display = 'none';document.getElementById('scopeLeft').style.display = 'block';document.getElementById('itemScope').style.marginLeft = 'calc(100% - 1104px)';}
     document.getElementById('scopeLeft').onclick = function (){this.style.display = 'none';document.getElementById('scopeRight').style.display = 'block';document.getElementById('itemScope').style.marginLeft = '0';}
     window.onresize = function (){if(innerWidth >= 1228){document.getElementById('scopeRight').style.display = '';document.getElementById('scopeLeft').style.display = '';document.getElementById('itemScope').style.marginLeft = '';}if (innerWidth <= 766){document.getElementById('scopeRight').style.display = '';document.getElementById('scopeLeft').style.display = '';document.getElementById('itemScope').style.marginLeft = '';}}
+
 }
